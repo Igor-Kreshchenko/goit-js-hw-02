@@ -1,8 +1,9 @@
 const formatString = function (string) {
   const array = string.split('');
+  const maxStringLength = 40;
 
   for (let i = 0; i < array.length; i += 1) {
-    if (i > 40) {
+    if (i > maxStringLength) {
       array.splice(40, i, '...');
     }
   }
