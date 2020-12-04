@@ -1,15 +1,17 @@
 const formatString = function (string) {
-  const array = string.split('');
-  const maxStringLength = 40;
+  if (string.length > 40) {
+    const array = string.split('');
 
-  for (let i = 0; i < array.length; i += 1) {
-    if (i > maxStringLength) {
-      array.splice(40, i, '...');
+    for (let i = 0; i < array.length; i++) {
+      if (i > 40) {
+        array.splice(40, i, '...');
+        const shortString = array.join('');
+        return shortString;
+      }
     }
   }
 
-  const finalString = array.join('');
-  return finalString;
+  return string;
 };
 
 console.log(formatString('Curabitur ligula sapien, tincidunt non.'));
