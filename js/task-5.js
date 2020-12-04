@@ -1,8 +1,8 @@
 const checkForSpam = function (message) {
-  const lowerCaseMessage = message.toLowerCase();
+  const normalizedMessage = message.toLowerCase();
 
   const isContain =
-    lowerCaseMessage.includes('spam') || lowerCaseMessage.includes('sale')
+    normalizedMessage.includes('spam') || normalizedMessage.includes('sale')
       ? true
       : false;
 

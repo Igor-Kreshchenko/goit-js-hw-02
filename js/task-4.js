@@ -4,7 +4,7 @@ const formatString = function (string) {
 
     for (let i = 0; i < array.length; i++) {
       if (i > 40) {
-        array.splice(40, i, '...');
+        const changedArray = array.splice(40, i, '...');
         const shortString = array.join('');
         return shortString;
       }
