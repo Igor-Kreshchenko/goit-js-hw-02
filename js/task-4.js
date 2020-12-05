@@ -11,11 +11,10 @@ const formatString = function (string) {
 // const formatString = function (string) {
 //   if (string.length > 40) {
 //     const array = string.split('');
-//     let changedArray;
 
 //     for (let i = 0; i < array.length; i++) {
 //       if (i > 40) {
-//         changedArray = array.splice(40, i, '...');
+//         array.splice(40, i, '...');
 //         const shortString = array.join('');
 //         return shortString;
 //       }
